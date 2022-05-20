@@ -1,10 +1,13 @@
 package com.brandontarrant.daikichichallenge.controllers;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Controller
 @RequestMapping("/daikichi")
 public class DaikichiController {
 	
@@ -37,5 +40,15 @@ public class DaikichiController {
 		else {
 			return "You have enjoyed the fruits of your labor but now is a great time to spend time with family and friends.";
 		}
+	}
+	
+	@GetMapping("/")
+	public String index() {
+		return "redirect:/omikuji";
+	}
+	
+	@GetMapping("/omikuji")
+	public String omikuji() {
+		return "index.jsp";
 	}
 }
