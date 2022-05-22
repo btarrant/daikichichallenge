@@ -1,1 +1,17 @@
 @charset "UTF-8";
+
+h1 {
+	margin-left: 300px;
+	margin-top: 20px;
+}
+
+.result-box {
+	margin-left: 250px;
+	width: 400px;
+	height: 700px;
+	background-color: lightblue;
+}
+
+.back-btn {
+	margin-left: 410px;
+}
